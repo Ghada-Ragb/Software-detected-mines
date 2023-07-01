@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>SpaceX</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav style="background-color:  rgba(185, 124, 110, 0.919);height: 90px;" role="navigation" >
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+      </ul>
+        <center style="font-size: 400%;color:rgb(167, 43, 21);text-shadow: 4px 1px 1px rgba(86, 51, 43, 0.919);">Team SpaceX</center>
+      <ul id="nav-mobile" class="sidenav">
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1  style="color:rgb(167, 43, 21);text-shadow: 4px 1px 1px rgba(86, 51, 43, 0.919);transform: translateX(20%);">Mine Detection Drone</h1>
+      <div class="row center">
+        <h4 style="color: rgb(181, 124, 40);">Enter the dimensions to discover whether there is a mine or not..
+        <br>
+        </h4>
+      </div>
+
+              <div class="row">
+                  <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="raduis" style="color: rgb(181, 124, 40);font-size: 120%;">What is Raduis ?</label>
+            <br>
+          <input placeholder="Enter your raduis" name="raduis" id="raduis" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="texture" style="color: rgb(181, 124, 40);font-size: 120%;">What is Texture ? </label>
+            <br>
+          <input id="texture" name="texture" placeholder="Enter your texture"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="perimeter" style="color: rgb(181, 124, 40);font-size: 120%;">What is Perimeter ?</label>
+            <br>
+          <input id="perimeter" name="perimeter" placeholder="Enter your perimeter" type="text" class="validate">
+
+        </div>
+        <br>
+        <br>
+        <div class="input-field col s4">
+            <label for="area" style="color: rgb(181, 124, 40);font-size: 120%;">What is Area ?</label>
+            <br>
+          <input id="area" name="area" placeholder="Enter your area" type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="smoothness" style="color: rgb(181, 124, 40);font-size: 120%;">What is Smoothness ?</label>
+            <br>
+          <input id="smoothness" name="smoothness" placeholder="Enter your smoothness" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="depth" style="color: rgb(181, 124, 40);font-size: 120%;">What is Depth ?</label>
+            <br>
+            <input id="depth" name="depth" placeholder="Enter your depth" type="text" class="validate">
+        </div>
+
+          <div class="input-field col s4" style="transform: translateX(100%);">
+            <label for="concavity" style="color: rgb(181, 124, 40);font-size: 120%;">What is Concavity ?</label>
+            <br>
+            <input id="concavity" name="concavity" placeholder="Enter your concavity" type="text" class="validate">
+          </div>
+           <br>
+           <br>
+        <div class="row center">
+        <button type="submit" class="btn-large waves-effect waves-light orange" style="transform: translate(-80%,210%);">Predict Probability</button>
+         </div>
+      </div>
+      </form>
+              </div>
+      <br>
+
+      <br>
+      <h4 style="transform: translateY(20%);" align="center">
+        {{pred}}
+      </h4>
+       <br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+
+  <footer style="color:rgb(167, 43, 21);background-color: rgba(185, 124, 110, 0.919);">
+    <div class="container">
+      <div style="height: 130px;">
+          <center style="color:rgb(167, 43, 21);font-size: 30px;">Members Of Team</center>
+
+          <center style="font-size: 20px;"><pre>Islam_AbdElhady😊         Ghada_Ragab😊         Marian_Ashraf😊  </pre></center>
+         <br>
+         <br>
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+  </body>
+</html>
+
+
+
+
+

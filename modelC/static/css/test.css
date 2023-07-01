@@ -1,0 +1,8 @@
+.pre {
+    color:rgb(167, 43, 21);
+    background:rgba(185, 124, 110, 0.919);
+    border:1px solid rgb(93, 16, 16);
+    padding:15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
